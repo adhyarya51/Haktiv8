@@ -1,0 +1,12 @@
+"use strict";this.default_r_tvffkgi=this.default_r_tvffkgi||{};(function(_){var window=this;
+try{
+_.$h("pm_purview_picker_starred_errors");
+var Q4d=function(a){if(a&1){const b=_.t();_.K(0,"cfc-message",6)(1,"cfc-message-text");_.P(2,0);_.L();_.K(3,"cfc-message-actions")(4,"button",7);_.R("click",function(){_.v(b);const c=_.S();return _.x(c.retry())});_.P(5,1);_.L()()()}},R4d=function(a){if(a&1){const b=_.t();_.K(0,"cfc-message",8)(1,"cfc-message-text");_.P(2,2);_.L();_.K(3,"cfc-message-actions")(4,"button",7);_.R("click",function(){_.v(b);const c=_.S();return _.x(c.dismiss())});_.P(5,3);_.L()()()}},S4d=class{constructor(a,b){this.cdr=
+a;this.store=b;this.onDestroy=new _.Yf;this.showMutateError=this.showFetchError=!1}ngOnInit(){const a=this.store.select(_.F4d,{key:"mutate"}).pipe(_.F(this.onDestroy)),b=this.store.select(_.F4d,{key:"fetch"}).pipe(_.F(this.onDestroy));_.Ie([a,b]).subscribe(([c,d])=>{this.showFetchError=d.isActive;this.showMutateError=!this.showFetchError&&c.isActive;this.cdr.markForCheck()})}dismiss(){this.store.dispatch((0,_.x4d)({key:"mutate"}));this.cdr.markForCheck()}retry(){this.store.dispatch((0,_.y4d)());this.cdr.markForCheck()}ngOnDestroy(){this.onDestroy.next()}};
+S4d.\u0275fac=function(a){return new (a||S4d)(_.D(_.vr),_.D(_.cv))};
+S4d.\u0275cmp=_.m({type:S4d,selectors:[["cfc-purview-picker-starred-errors"]],decls:2,vars:2,consts:()=>[" Stars are not currently available. "," Retry "," Unable to update stars. Please try again. "," Dismiss ",["class"," cfctest-fetch-error-message","type","error",4,"ngIf"],["class"," cfctest-mutate-error-message","type","error",4,"ngIf"],["type","error",1,"cfctest-fetch-error-message"],["mat-button","","color","primary",3,"click"],["type","error",1,"cfctest-mutate-error-message"]],template:function(a,
+b){a&1&&_.H(0,Q4d,6,0,"cfc-message",4)(1,R4d,6,0,"cfc-message",5);a&2&&(_.I("ngIf",b.showFetchError),_.B(),_.I("ngIf",b.showMutateError))},dependencies:[_.Cr,_.vx,_.Su,_.sx,_.uu,_.wu,_.vu],encapsulation:2,changeDetection:0});var T4d=class{};T4d.\u0275fac=function(a){return new (a||T4d)};T4d.\u0275mod=_.q({type:T4d,id:"pm_purview_picker_starred_errors"});T4d.\u0275inj=_.k({providers:[{provide:_.gs,useValue:{PurviewPickerStarredErrors:S4d}}],imports:[_.Qr,_.wx,_.Du,_.XN]});_.kg(T4d,"pm_purview_picker_starred_errors");
+_.ai();
+}catch(e){_._DumpException(e)}
+}).call(this,this.default_r_tvffkgi);
+// Google Inc.

@@ -1,0 +1,11 @@
+"use strict";this.default_r_tvffkgi=this.default_r_tvffkgi||{};(function(_){var window=this;
+try{
+var D3d=class{};D3d.\u0275fac=function(a){return new (a||D3d)};D3d.\u0275mod=_.q({type:D3d,id:"pm_section_nav_service_module"});D3d.\u0275inj=_.k({providers:[{provide:_.gs,useValue:{SectionNavService:_.XD}}],imports:[_.Ju]});_.kg(D3d,"pm_section_nav_service_module");
+}catch(e){_._DumpException(e)}
+try{
+_.$h("pm_responsive_section_nav_service");
+var X3d=class{constructor(a,b){this.panelService=b;b=(b=this.panelService.globalPanelState.has("section-nav-panel")?this.panelService.globalPanelState.get("section-nav-panel"):null)?b.isOpenChanges.pipe(_.A(c=>!c)):_.y(!1);this.isResponsiveSectionNavAvailable=_.Ie([a.isSectionNavEnabled,b]).pipe(_.A(([c,d])=>c&&d),_.Ff(),_.Wf(1),_.Ee())}};X3d.\u0275fac=function(a){return new (a||X3d)(_.l(_.XD),_.l(_.BD))};X3d.\u0275prov=_.h({token:X3d,factory:X3d.\u0275fac,providedIn:"root"});var Y3d=class{};Y3d.\u0275fac=function(a){return new (a||Y3d)};Y3d.\u0275mod=_.q({type:Y3d,id:"pm_responsive_section_nav_service"});Y3d.\u0275inj=_.k({providers:[{provide:_.gs,useValue:{ResponsiveSectionNavService:X3d}}]});_.kg(Y3d,"pm_responsive_section_nav_service");
+_.ai();
+}catch(e){_._DumpException(e)}
+}).call(this,this.default_r_tvffkgi);
+// Google Inc.

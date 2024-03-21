@@ -1,0 +1,8 @@
+"use strict";this.default_r_tvffkgi=this.default_r_tvffkgi||{};(function(_){var window=this;
+try{
+_.$h("pm_bigquery_results_explain");
+var mkk=class{};mkk.\u0275fac=function(a){return new (a||mkk)};mkk.\u0275mod=_.q({type:mkk,id:"pm_bigquery_results_explain"});mkk.\u0275inj=_.k({providers:[{provide:_.gs,useValue:{ResultsExplain:_.Fek}}],imports:[_.Iek]});_.kg(mkk,"pm_bigquery_results_explain");
+_.ai();
+}catch(e){_._DumpException(e)}
+}).call(this,this.default_r_tvffkgi);
+// Google Inc.

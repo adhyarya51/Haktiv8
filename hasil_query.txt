@@ -1,0 +1,71 @@
+```SELECT *
+FROM `bigquery-public-data.noaa_tsunami.historical_source_event`
+where damage_millions_dollars is not null
+limit 10;
+
+-- lihat data record tsunami dari tahun berapa sampai tahun berapa (minimum dan maximum) extract
+-- (VICKY)
+select
+min(extract(year from timestamp)) as min_year,
+max (extract(year from timestamp)) as max_year
+from `bigquery-public-data.noaa_tsunami.historical_source_event`;
+
+-- ambil top 7 negara dengan jumlah tsunami terbanyak (tampilkan nama negara dan jumlah kejadian)
+select country, count(id) as `kasus tsunami`
+from `bigquery-public-data.noaa_tsunami.historical_source_event`
+group by country
+order by count(id) desc
+LIMIT 7;
+
+-- ambil top 7 negara dengan jumlah kasus kematian terbanyak (tampilkan nama negara dan jumlah kematian) (LIVIA)
+select country, sum(deaths) as `jumlah kematian`
+from `bigquery-public-data.noaa_tsunami.historical_source_event`
+group by country
+order by sum(deaths) desc
+LIMIT 7;
+
+-- subquery 
+-- dari top 7 negara dengan jumlah tsunami terbanyak, urutkan berdasarkan jumlah kasus kematian
+-- (VICKY)
+SELECT country,  kasus_tsunami, jumlah_kematian
+FROM (select country, count(id) as kasus_tsunami, sum(deaths) as jumlah_kematian
+    from `bigquery-public-data.noaa_tsunami.historical_source_event`
+    group by country
+    order by count(id) desc
+    LIMIT 7) as subquery
+ORDER BY subquery.jumlah_kematian DESC;
+
+
+-- lihat nilai rata-rata primary_magnitude untuk setiap event_validity (ALFA)
+select event_validity,
+avg(primary_magnitude) as average
+from `bigquery-public-data.noaa_tsunami.historical_source_event`
+group by event_validity;
+
+-- Tampilkan 7 negara dengan total kerugian terbesar (CEBAT)
+select country, sum(total_damage_in_millions_dollars)
+from `bigquery-public-data.noaa_tsunami.historical_source_event`
+group by country
+order by 2 desc
+LIMIT 7;
+
+-- subquery, bisa juga tanpa subquery
+-- dari top 7 negara dengan jumlah tsunami terbanyak, lihat negara-negara dengan total kerugian (total_damage_in_millions_dollars) akan tsunami diatas 1 billion dolar (total_damage_in_millions_dollars)
+-- (DAFFA)(0.5)
+
+-- subquery
+select country
+from
+    (select country, count(*) as `kasus tsunami`, max(total_damage_in_millions_dollars) as total_loss
+    from `bigquery-public-data.noaa_tsunami.historical_source_event`
+    group by country
+    order by count(*) desc
+    LIMIT 7)
+where total_loss > 10;
+
+select country, count(*) as kasus ,max(total_damage_in_millions_dollars) as total_loss
+from `bigquery-public-data.noaa_tsunami.historical_source_event`
+group by country
+having sum(total_damage_in_millions_dollars) > 500
+order by 2 desc
+limit 7;```

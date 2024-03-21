@@ -1,0 +1,11 @@
+"use strict";this.default_r_tvffkgi=this.default_r_tvffkgi||{};(function(_){var window=this;
+try{
+_.$h("pm_page_not_found_view");
+var boe=function(a){a&1&&(_.K(0,"li"),_.M(1,"a",9),_.L())},coe=class{constructor(){this.welcomeUrl=_.moc.create().link().asString();this.cloudBrandName=_.QIa();this.consoleDocBaseUrl=_.vc(_.SIa());this.isTpc=_.Oi()}};coe.\u0275fac=function(a){return new (a||coe)};
+coe.\u0275cmp=_.m({type:coe,selectors:[["page-not-found"]],hostAttrs:[1,"cfc-flex-layout-column"],decls:14,vars:5,consts:()=>[" URL not found "," We couldn't find what you were looking for. Try one of the links below. "," \ufffd0\ufffd home ",["linkText","\ufffd0\ufffd documentation"],[1,"cfc-space-first"],["cfc-list",""],["cfcTrackedLink","","track-type","errorAction","track-name","toConsole",3,"cfcRouterLink"],["cfcTrackedLink","","track-type","errorAction","track-name","toMarketing",3,"cfc-external-link",
+6,"linkText"],[4,"ngIf"],"cfc-external-link;http://developers.google.com;cfcTrackedLink;;track-type;errorAction;track-name;toDeveloperDocs;linkText;Google for Developers".split(";")],template:function(a,b){a&1&&(_.K(0,"cfc-single-panel-layout")(1,"cfc-panel-body")(2,"h2",4),_.P(3,0),_.L(),_.K(4,"p"),_.P(5,1),_.L(),_.K(6,"ul",5)(7,"li")(8,"a",6),_.P(9,2),_.L()(),_.K(10,"li")(11,"a",7),_.Rg(12,3),_.L()(),_.H(13,boe,2,0,"li",8),_.L()()());a&2&&(_.B(8),_.I("cfcRouterLink",b.welcomeUrl),_.B(),_.Sg(b.cloudBrandName),
+_.Tg(9),_.B(2),_.Sg(b.cloudBrandName),_.Tg(12),_.I("cfc-external-link",b.consoleDocBaseUrl),_.B(2),_.I("ngIf",!b.isTpc))},dependencies:[_.xC,_.uP,_.oA,_.Jy,_.ED,_.xu,_.Cr],encapsulation:2});var doe=class{};doe.\u0275fac=function(a){return new (a||doe)};doe.\u0275mod=_.q({type:doe});doe.\u0275inj=_.k({imports:[_.zC,_.vP,_.qA,_.Lz,_.JD,_.Oz,_.Qr]});var eoe=class{};eoe.\u0275fac=function(a){return new (a||eoe)};eoe.\u0275mod=_.q({type:eoe,id:"pm_page_not_found_view"});eoe.\u0275inj=_.k({imports:[_.Mu([{path:"",component:coe}]),doe]});_.kg(eoe,"pm_page_not_found_view");
+_.ai();
+}catch(e){_._DumpException(e)}
+}).call(this,this.default_r_tvffkgi);
+// Google Inc.
